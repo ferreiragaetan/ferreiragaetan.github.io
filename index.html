@@ -3,7 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gaëtan Ferreira — Vidéaste & Télépilote Drone</title>
+
+<!-- SEO -->
+<title>Gaëtan Ferreira — Vidéaste & Monteur en Auvergne-Rhône-Alpes</title>
+<meta name="description" content="Vidéaste, monteur et télépilote drone en Auvergne-Rhône-Alpes. Montage vidéo, reels, teasers, prises de vue aériennes et contenus automobile & voyage. Approche cinématique et impliquée.">
+<meta name="keywords" content="vidéaste, monteur vidéo, télépilote drone, montage vidéo, reels, vidéo Auvergne-Rhône-Alpes, vidéaste freelance, prise de vue drone, vidéo automobile, vidéaste Lyon, vidéaste Grenoble">
+<meta name="author" content="Gaëtan Ferreira">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ferreiragaetan.github.io/.github.io/">
+
+<!-- Open Graph (partage réseaux sociaux) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gaëtan Ferreira — Vidéaste & Monteur en Auvergne-Rhône-Alpes">
+<meta property="og:description" content="Vidéaste, monteur et télépilote drone. Je transforme vos images en récits visuels avec du rythme et de l'émotion.">
+<meta property="og:url" content="https://ferreiragaetan.github.io/.github.io/">
+<meta property="og:image" content="https://i.vimeocdn.com/video/1191158130.jpg">
+<meta property="og:locale" content="fr_FR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gaëtan Ferreira — Vidéaste & Monteur">
+<meta name="twitter:description" content="Vidéaste, monteur et télépilote drone en Auvergne-Rhône-Alpes.">
+
+<!-- Données structurées (Google) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Gaëtan Ferreira — Vidéaste",
+  "description": "Vidéaste, monteur et télépilote drone en Auvergne-Rhône-Alpes. Montage vidéo, reels, teasers, prises de vue aériennes, contenus automobile et voyage.",
+  "url": "https://ferreiragaetan.github.io/.github.io/",
+  "email": "ferreira.gaetan@gmail.com",
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Auvergne-Rhône-Alpes"
+  },
+  "serviceType": ["Montage vidéo", "Prise de vue drone", "Reels et formats courts", "Teaser et vidéo promotionnelle", "Storytelling voyage et automobile"],
+  "sameAs": [
+    "https://www.instagram.com/gaetan.ferreira"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -667,6 +708,81 @@
     z-index: 3;
   }
 
+  .vertical-section {
+    margin-top: 64px;
+  }
+
+  .vertical-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .vertical-label::before {
+    content: '';
+    display: block;
+    width: 24px; height: 1px;
+    background: var(--cyan);
+  }
+
+  .vertical-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .vertical-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 9/16;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+    transition: border-color 0.3s;
+  }
+
+  .vertical-card:hover { border-color: var(--muted); }
+
+  .vertical-thumb {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.55;
+    transition: opacity 0.4s, transform 0.4s;
+  }
+
+  .vertical-card:hover .vertical-thumb {
+    opacity: 0.75;
+    transform: scale(1.03);
+  }
+
+  .vertical-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(8,8,8,0.9) 0%, rgba(8,8,8,0.2) 50%, transparent 100%);
+    z-index: 1;
+  }
+
+  .vertical-tag {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    position: relative;
+    z-index: 3;
+  }
+
   /* CONTACT */
   .contact { background: var(--dark); border-top: 1px solid var(--border); }
 
@@ -820,6 +936,7 @@
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
     .services-grid { grid-template-columns: 1fr; }
     .portfolio-grid { grid-template-columns: 1fr; }
+    .vertical-grid { grid-template-columns: 1fr 1fr; }
     .portfolio-intro { flex-direction: column; align-items: flex-start; gap: 16px; }
     .portfolio-note { text-align: left; }
     .project-card.featured-project { grid-row: span 1; }
@@ -1040,6 +1157,37 @@
     </div>
 
   </div>
+
+  <div class="vertical-section">
+    <p class="vertical-label reveal">Formats verticaux · Reels</p>
+    <div class="vertical-grid">
+
+      <div class="vertical-card reveal">
+        <div class="vertical-thumb" style="background-image: url('https://img.youtube.com/vi/DaLWu405hMs/maxresdefault.jpg')"></div>
+        <div class="vertical-overlay"></div>
+        <a href="https://youtube.com/shorts/DaLWu405hMs" target="_blank" class="project-link" aria-label="Voir le reel JPO Pompiers"></a>
+        <span class="project-yt">▶ Voir le Reel</span>
+        <p class="vertical-tag">JPO Sapeurs-Pompiers</p>
+      </div>
+
+      <div class="vertical-card reveal">
+        <div class="vertical-thumb" style="background-image: url('https://img.youtube.com/vi/5aTavaXWVmY/maxresdefault.jpg')"></div>
+        <div class="vertical-overlay"></div>
+        <a href="https://youtube.com/shorts/5aTavaXWVmY" target="_blank" class="project-link" aria-label="Voir le reel JPO Pompiers"></a>
+        <span class="project-yt">▶ Voir le Reel</span>
+        <p class="vertical-tag">JPO Sapeurs-Pompiers</p>
+      </div>
+
+      <div class="vertical-card reveal">
+        <div class="vertical-thumb" style="background-image: url('https://img.youtube.com/vi/pptXAEKPHiI/maxresdefault.jpg')"></div>
+        <div class="vertical-overlay"></div>
+        <a href="https://youtube.com/shorts/pptXAEKPHiI" target="_blank" class="project-link" aria-label="Voir le reel exercice Yomi"></a>
+        <span class="project-yt">▶ Voir le Reel</span>
+        <p class="vertical-tag">Exercice · Yomi</p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
@@ -1067,10 +1215,6 @@
         <a href="https://instagram.com/gaetan.ferreira" class="contact-link" target="_blank">
           <span class="contact-link-icon">◈</span>
           Instagram
-        </a>
-        <a href="https://www.linkedin.com/in/ga%C3%ABtan-ferreira-a83b71113/" class="contact-link" target="_blank">
-          <span class="contact-link-icon">in</span>
-          LinkedIn
         </a>
       </div>
     </div>
